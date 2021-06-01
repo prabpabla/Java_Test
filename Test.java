@@ -5,11 +5,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
-import javax.security.auth.callback.ConfirmationCallback;
 
-import com.sun.org.apache.bcel.internal.Const;
-
-import sun.awt.www.content.image.gif;
 
 /**
  * @author prab_
@@ -215,13 +211,123 @@ public class Test {
 		//Use method chaining to avoid creating the 'percent' object to reference
 		//If 'percent' object was referenced more than once, then its viable to be instantiated
 		
+		
+		/*
+		 * Reading input from the user
+		 * Scanner class is part of the java.util package
+		 * Create a scanner object using the 'new' operator
+		 * Inside the new Scanner'()' specify the input location; terminal, file, etc.
+		 * scanner class has methods; nextByte(), nextDouble(), nextLine()
+		 * next() just accesses the first token, use nextLine() for the entire line input
+		 */
+		/*
 		Scanner scanner = new Scanner(System.in);
+				
+		System.out.println("Enter your Salary: ");
 		double doubleNumber = scanner.nextDouble();
-		System.out.println("Salary: " + doubleNumber);
+		System.out.println("Your Salary: " + NumberFormat.getCurrencyInstance().format(doubleNumber));
+		
+		System.out.println("Enter your Age: ");
 		byte byteNumber = scanner.nextByte();
-		String name = scanner.next();
-		String line = scanner.nextLine();
+		System.out.println("Your Age: " + byteNumber);
 
+		System.out.println("Enter your Name: ");
+		scanner.nextLine();
+		String line = scanner.nextLine().trim();
+		System.out.println("Your Name: " + line);
+		*/
+		
+		/*
+		 * Comparison Operators are used to compare primitive values
+		 * x == y equality operator
+		 * x != y in-equality operator
+		 * x >= y greater than or equal to
+		 * x <= y less than or equal to
+		 */
+		
+		/*
+		 * Logical Operators are used to combine multiple boolean values/expressions
+		 * x && y 'AND' if both x and y are true, the result will be true
+		 * x || y 'OR' if either x or y or both are true, the result will be true
+		 * !x 'NOT' reverses a boolean value. True becomes false. 
+		 */
+		
+		/*
+		 * If Statements are decisions based on conditions
+		 * if (condition1)
+		 * 		statement1
+		 * else if (condition2)
+		 * 		statement2
+		 * else
+		 * 		statement3
+		 * To execute multiple statements, wrap the statements in {}
+		 */
+		/*
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter your Temperature: ");
+		byte temp = scanner.nextByte();
+		if (temp > 30) {
+			System.out.println("It's a hot day!");
+			System.out.println("Drink water!");
+		}
+		else if (temp > 20) 
+			System.out.println("It's a beautiful day!");
+		else 
+			System.out.println("It's a cold day!");
+		*/
+		
+		/*
+		 * Ternary Operators are sued as a shorthand for if statements
+		 * Makes use of the ? and :
+		 * Condition ? if_condition_True : if_condition_False;
+		 */
+		int income = 120000;
+		boolean hasHighIncome = income > 100000;
+		//Simplifying if statements
+
+		String className;
+		if (income > 100_000)
+			className = "First Class";
+		else
+			className = "Economy Class";
+		//This can be simplified using Ternerary Operator
+		
+		String classType = income > 100000 ? "First Class" : "Economy Class";
+
+		/*
+		 * Switch statements can execute different parts of code depending on value of variable
+		 * switch (expression) {
+		 * 		case 1:
+		 * 			statement1
+ 		 *			break;
+ 		 *		case 2:
+		 * 			statement2
+ 		 *			break;
+ 		 *		default:
+ 		 *			default_statement
+ 		 *	}
+		 */
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the number for month");
+		byte month = scanner.nextByte();
+		switch (month) {
+			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+				System.out.println("Number of days in this Month is 31");
+				break;
+			case 4: case 6: case 9: case 11:
+				System.out.println("Number of days in this Month is 30");
+				break;
+			case 2:
+				System.out.println("Number of days in this Month is 28, or 29 it's leap year");
+				break;
+			default:
+				System.out.println("Incorrect Month entry!");
+		}
 	}
-
 }
+
+
+
