@@ -1,9 +1,4 @@
 import java.util.Scanner;
-
-import org.graalvm.compiler.nodes.java.MethodCallTargetNode;
-
-import sun.reflect.generics.scope.MethodScope;
-
 import java.lang.reflect.*;
 
 /*
@@ -25,6 +20,10 @@ public class Two_Sum{
         return null;
     }
 	
+	/*
+	 * Test 1
+	 * Checks for solution length of 2, and correct output
+	 */
 	public boolean test1() {
 	    int[] sol = this.twoSumBrute(new int[] {2, 4, 5, 8, 11, 4}, 9);
 	    if (sol == null)
@@ -36,6 +35,10 @@ public class Two_Sum{
 	    return false;
 	}
 	
+	/*
+	 * Test 2
+	 * Checks for null solution
+	 */
 	public boolean test2() {
 	    int[] sol = this.twoSumBrute(new int[] {9, 9, 9, 9, 9}, 9);
 	    if (sol == null)
@@ -43,7 +46,9 @@ public class Two_Sum{
 	    return false;
 	}
 
-	//MAIN
+	/*
+	 * Utility for running tests for Two_Sum automatically
+	 */
 	public static void main(String[] args) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		
 		Two_Sum twoSum = new Two_Sum();
@@ -60,5 +65,5 @@ public class Two_Sum{
 			}
 		}
 	}
-	
+
 }

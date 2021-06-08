@@ -308,24 +308,109 @@ public class Test {
  		 *			default_statement
  		 *	}
 		 */
-		
-		
+		/*		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the number for month");
 		byte month = scanner.nextByte();
 		switch (month) {
 			case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-				System.out.println("Number of days in this Month is 31");
+				System.out.println("Number of days in this Month is 31!");
 				break;
 			case 4: case 6: case 9: case 11:
-				System.out.println("Number of days in this Month is 30");
+				System.out.println("Number of days in this Month is 30!");
 				break;
 			case 2:
-				System.out.println("Number of days in this Month is 28, or 29 it's leap year");
+				System.out.println("Number of days in this Month is 28, or 29 it's leap year!");
 				break;
 			default:
 				System.out.println("Incorrect Month entry!");
 		}
+		*/
+		
+		/*
+		 * For loops are useful when the number of repetitions of some code is known
+		 * Declare a loop variable (or loop counter) 
+		 * In each iteration, increment counter to reach the number of times to execute some code
+		 * for (int i = 0; i < repetition_Number; i++)
+		 * 		statement
+		 */
+		
+		/*
+		 * While loops are useful when number of repetitions for a code is not known 
+		 * This may be dependent on the values at run-time (eg what the user enters).
+		 * Use break statement to jump out of a loop.
+		 * while (someCondition) {
+		 * 		statement
+		 * 		if (someCondition)
+		 * 		break;
+		 * }
+		 */
+		/*
+		String input = "";
+		Scanner scanner = new Scanner(System.in);
+		while (!input.equals("quit")) {
+		//The code is checking if input DOES NOT EQUAL "quit"
+		//Do not use the while(input != "quit")
+		//input is a String, which is a reference type, and != comparator, will compare the address
+		//In this case, it will compare the address, and not their value
+			System.out.println("Input: ");
+			input = scanner.next().toLowerCase();
+			System.out.println(input);
+		}
+		*/
+		
+		/*
+		 * Do While loops are similar to While loops, but are executed at least once
+		 * In contrast, a while loops may never get executed if the condition is initially false
+		 * do {
+		 * 	statement
+		 * } while (someCondition);
+		 */
+		/*
+		String input = "";
+		Scanner scanner = new Scanner(System.in);
+		do {
+			System.out.println("Input: ");
+			input = scanner.next().toLowerCase();
+			System.out.println(input);
+		} while (!input.equals("quit"));
+		*/
+		
+		/*
+		 * Making use of break and continue statements
+		 * Use break statement to terminate the loop
+		 * Use continue statement to move control to the beginning of the loop
+		 */
+		/*
+		String input = "";
+		Scanner scanner = new Scanner(System.in);
+		while(true) {
+			System.out.println("Input: ");
+			input = scanner.next().toLowerCase();
+			if(input.equals("pass"))
+				continue;
+			if(input.equals("quit"))
+				break;
+			System.out.println(input);
+		}
+		*/
+		
+		/*
+		 * For-each loops are useful for iterating over an array or a collection
+		 * Limited to forward only iteration, and cannot iterate in reverse
+		 * Do not have access to the index of the item
+		 * int[] numbers = {1, 2, 3, 4};
+		 * 		for (int number : numbers)
+		 */
+		String[] fruits = {"Apple", "Mango", "Orange"};
+		for(String fruit : fruits)
+			System.out.println(fruit);
+		
+		for (int i = fruits.length-1; i >= 0; i--)
+			System.out.println(fruits[i]);
+		//Declare a variable of the same type as that of the array
+		//Iterates through each element in the array
+		
 	}
 }
 

@@ -23,7 +23,7 @@ public class FizzBuzz {
 		byte range = scanner.nextByte();
 		String output = "";
 		
-		
+		/*
 		for (int i = 1; i <= range; i++) {
 			if (i%3 == 0 && i%5 == 0) {
 				output += ("FizzBuzz");
@@ -39,7 +39,26 @@ public class FizzBuzz {
 			}
 		}
 		System.out.println(output);
+		*/
 		
+		for (int i = 1; i <= range; i++) {
+			boolean isDivisible3 = (i%3 == 0);
+			boolean isDivisible5 = (i%5 == 0);
+
+			if (isDivisible3 && isDivisible5) {
+				output += ("FizzBuzz");
+				output += i != range ? ", " : "";
+			}
+			else if (isDivisible3) {
+				output += "Buzz";
+				output += i != range ? ", " : "";
+			}
+			else if (isDivisible5) {
+				output += "Fizz";
+				output += i != range ? ", " : "";
+			}
+		}
+		System.out.println(output);
 		
 		/*
 		String[] outputArray = new String[range];
