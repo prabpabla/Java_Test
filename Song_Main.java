@@ -15,11 +15,12 @@ public class Song_Main {
 		//Both print the same count, because the static attribute is being shared
 		
 		Song rememberTheName = new Song("Remember The Name", "Fort Minor", 500);
+		//Notice, the song count is updated with creation of new song object
 		
 		System.out.println(loseYourself.getSongsCount());
 		System.out.println(godzilla.getSongsCount());
 		System.out.println(rememberTheName.getSongsCount());
-
+		//Song count is the same, as it is shared 
 	}
 
 }
